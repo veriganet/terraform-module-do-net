@@ -2,6 +2,16 @@
 # Provider
 # ########
 
+# Set the variable value in *.tfvars file
+# or using -var="do_token=..." CLI option
+# or DIGITALOCEAN_TOKEN / DIGITALOCEAN_ACCESS_TOKEN environment variables
+variable "do_token" {}
+
+# Configure the DigitalOcean Provider
+provider "digitalocean" {
+  token = var.do_token
+}
+
 # #########
 # terraform
 # #########
