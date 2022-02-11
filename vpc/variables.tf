@@ -4,6 +4,15 @@ variable "description" {
   default = ""
 }
 
+# Set the variable value in *.tfvars file
+# or using -var="do_token=..." CLI option
+# or DIGITALOCEAN_TOKEN / DIGITALOCEAN_ACCESS_TOKEN environment variables
+variable "do_token" {
+  description = "DigitalOcean API Token"
+  type = string
+  default = ""
+}
+
 variable "ip_range" {
   description = "(Optional) The range of IP addresses for the VPC in CIDR notation. Network ranges cannot overlap with other networks in the same account and must be in range of private addresses as defined in RFC1918. It may not be larger than /16 or smaller than /24."
   type = string
